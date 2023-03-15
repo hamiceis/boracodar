@@ -1,167 +1,149 @@
 <!DOCTYPE html>
 <html lang="pt-br">
   <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap"
       rel="stylesheet"
     />
-
-    <link rel="stylesheet" href="./style.css" />
-    <title>App Weather</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Página de clima</title>
+    <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <div id="app">
-      <div class="wrapper">
-        <div class="wrapper-location">
-          <img src="./assets/icons/pin.svg" alt="ponto de localização" />
-          <span>Rio do Sul, SC</span>
+    <main>
+      <section class="temperature-now">
+        <div class="location">
+          <img src="./assets/pin.svg" alt="icone de localizacao" />
+          <strong>Rio do Sul, SC</strong>
         </div>
-        <div class="wrapper-temperature">
-          <div class="temperature">18</div>
-          <div>
-            <span>22º 16º</span>
+        <div class="temp">
+          <div class="number">
+            18
+            <div class="maxmin">22° <span>16° </span></div>
           </div>
+          <div class="celsius">°C</div>
         </div>
-        <div class="wrapper-statistics">
-          <div class="card">
-            <img src="./assets/icons/weather.svg" alt="Icone Vento" />
-            <div class="weather-stats">
-              <span>Vento</span>
-              <p><strong>17</strong> km/h</p>
+        <div class="statistics">
+          <div class="stats">
+            <img src="./assets/temp-wind.svg" alt="icone de vento" />
+            <div class="info">
+              <p>Vento</p>
+              <h5>17 <span>km/h</span></h5>
             </div>
           </div>
-          <div class="card">
-            <img src="./assets/icons/weather-1.svg" alt="icone de chuva" />
-            <div class="weather-stats">
-              <span>Umidade</span>
-              <p><strong>31</strong> %</p>
+          <div class="stats">
+            <img src="./assets/temp-humidity.svg" alt="icone de umidade" />
+            <div class="info">
+              <p>Umidade</p>
+              <h5>31 <span>%</span></h5>
             </div>
           </div>
-
-          <div class="card">
-            <img
-              src="./assets/icons/weather-2.svg"
-              alt="icone de poucas chuvas"
-            />
-            <div class="weather-stats">
-              <span>Chuva</span>
-              <p><strong>10</strong> %</p>
+          <div class="stats">
+            <img src="./assets/temp-rain.svg" alt="icone de chuva" />
+            <div class="info">
+              <p>Chuva</p>
+              <h5>10 <span>%</span></h5>
             </div>
           </div>
         </div>
-      </div>
+      </section>
 
-      <div class="air-quality">
-        <div class="title">
-          <img src="./assets/icons/leaf.svg" alt="icone de folha" />
-          <h2>Qualidade do ar</h2>
-        </div>
+      <section class="air-quality">
+        <h2 class="title">
+          <img src="./assets/leaf.svg" alt="icone de folha de árvore" />
+          Qualidade do ar
+        </h2>
 
-        <div class="middleware">
-          <span>Boa</span>
-          <p>21</p>
-        </div>
+        <p class="good">Boa</p>
+        <p class="number">21</p>
 
         <div class="info">
-          <div class="card">
-            <span>12.9</span>
-            <p>PM2.5</p>
+          <div class="number">
+            <p>12.9</p>
+            <small>PM2.5</small>
           </div>
-
-          <div class="card">
-            <span>12.9</span>
-            <p>PM10</p>
+          <div class="number">
+            <p>12.9</p>
+            <small>PM10</small>
           </div>
-
-          <div class="card">
-            <span>2.1</span>
-            <p>SO<sub>2</sub></p>
+          <div class="number">
+            <p>2.1</p>
+            <small>SO₂</small>
           </div>
-
-          <div class="card">
-            <span>1.4</span>
-            <p>NO<sub>2</sub></p>
+          <div class="number">
+            <p>1.4</p>
+            <small>NO₂</small>
           </div>
-
-          <div class="card">
-            <span>21.2</span>
-            <p>O<sub>3</sub></p>
+          <div class="number">
+            <p>21.2</p>
+            <small>O₃</small>
           </div>
-
-          <div class="card">
-            <span>0.7</span>
-            <p>CO</p>
+          <div class="number">
+            <p>0.7</p>
+            <small>CO</small>
           </div>
         </div>
-      </div>
+      </section>
 
-      <div class="sun-time">
-        <div class="title">
-          <img src="./assets/icons/time.svg" alt="icone de sol" />
-          <h2>Horário do sol</h2>
+      <section class="sun-time">
+        <h2 class="title">
+          <img
+            src="./assets/sun-time.svg"
+            alt="icone de um sol com um relógio dentro"
+          />
+          Horário do sol
+        </h2>
+        <div class="sun-chart-wrapper">
+          <div class="sun-chart">
+            <div class="chart">
+              <img
+                src="./assets/sun-chart.svg"
+                alt="imagem de um gráfico semi circulo com traços"
+              />
+            </div>
+            <time class="now">17:48</time>
+          </div>
         </div>
-
-        <div class="chart">
-          <svg width="150" height="100" viewBox="-100 -100 200 90">
-            <circle
-              cx="0"
-              cy="0"
-              r="90"
-              fill="transparent"
-              stroke="#F6C833"
-              stroke-width="8"
-              stroke-dasharray="0.3 3.3"
-              stroke-dashoffset="0.1"
-              pathLength="60"
-            />
-          </svg>
+        <div class="time">
+          <time class="sunrise">06:00</time>
+          <time class="sunset">18:52</time>
         </div>
+      </section>
 
-        <div class="info">
-          <span>06:12</span>
-          <span>18:52</span>
-        </div>
-      </div>
-
-      <div class="week">
+      <section class="week-weather">
         <div class="day">
-          <h3>Amanhã</h3>
-          <img src="./assets/icons/weekDayIcon/weather.svg" alt="" />
-          <span>21º 16º</span>
+          <h4 class="title">Amanhã</h4>
+          <img src="./assets/weather-clouds.svg" alt="" />
+          <p class="maxmin">21° <span>16°</span></p>
         </div>
 
         <div class="day">
-          <h3>Sexta-feira</h3>
-          <img src="./assets/icons/weekDayIcon/weather-1.svg" alt="" />
-          <span>28º 30º</span>
+          <h4 class="title">Sexta</h4>
+          <img src="./assets/weather-sun.svg" alt="" />
+          <p class="maxmin">28° <span>16°</span></p>
         </div>
 
         <div class="day">
-          <h3>Sábado</h3>
-          <img src="./assets/icons/weekDayIcon/weather-2.svg" alt="" />
-          <span>25º 21º</span>
+          <h4 class="title">Sábado</h4>
+          <img src="./assets/weather-rain.svg" alt="" />
+          <p class="maxmin">20° <span>16°</span></p>
         </div>
 
         <div class="day">
-          <h3>Domingo</h3>
-          <img src="./assets/icons/weekDayIcon/weather-3.svg" alt="" />
-          <span>20º 14º</span>
+          <h4 class="title">Domingo</h4>
+          <img src="./assets/weather-thunder.svg" alt="" />
+          <p class="maxmin">28° <span>26°</span></p>
         </div>
 
         <div class="day">
-          <h3>Segunda-feira</h3>
-          <img src="./assets/icons/weekDayIcon/weather-4.svg" alt="" />
-          <span>24º 18º</span>
+          <h4 class="title">Segunda</h4>
+          <img src="./assets/weather-cloudy.svg" alt="" />
+          <p class="maxmin">26° <span>20°</span></p>
         </div>
-      </div>
-    </div>
-
-    <script src="./script.js"></script>
+      </section>
+    </main>
   </body>
 </html>

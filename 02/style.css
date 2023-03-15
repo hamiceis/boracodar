@@ -60,7 +60,7 @@ html.animated img#animated {
   display: initial;
 }
 
-#product-image > img {
+#product-image > img {  /* O element ">" ele serve para selecionar o elemento filho direto*/
   width: 449px;
   height: 222px;
   object-fit: cover;
