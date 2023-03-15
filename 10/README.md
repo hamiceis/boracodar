@@ -17,7 +17,7 @@
 <br>
 
 <p align="center">
-  <img src=".github/preview.jpg" width="100%">
+  <img src="https://i.ibb.co/M81c5K1/Captura-de-tela-2023-03-15-151504.jpg" width="100%">
 </p>
 
 ## 🚀 Tecnologias
