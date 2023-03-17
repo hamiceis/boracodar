@@ -18,7 +18,7 @@ body {
 main {
   background: url(./assets/bg.jpeg) no-repeat center/cover;
 
-  min-height: 100vh;
+  min-height: 100vh;  /* altura min para aparecer a background */
 
   display: grid;
   place-content: center;
@@ -38,7 +38,7 @@ section {
   position: relative;
 
   display: grid;
-  grid-template-rows: max-content 1fr max-content;
+  grid-template-rows: max-content 1fr max-content;  /*1ºSection, vai ter 3 rows: max-conteudo - 1fr: bloco que ocupa espaço disp */
 }
 
 .temperature-now::before {
@@ -111,7 +111,7 @@ section {
 }
 
 .stats {
-  flex: 1;
+  flex: 1; /* ocupa os espaços da caixa de forma igual entre cada um */
 
   padding: 1.2rem 1.6rem;
   background: rgba(102, 96, 200, 0.6);
@@ -135,7 +135,7 @@ section {
   font-size: 1.8rem;
 
   display: flex;
-  align-items: baseline;
+  align-items: baseline; /* alinhamento vertical ficar em baixo, proximo a linha */
   gap: 0.4rem;
 }
 
@@ -203,7 +203,7 @@ h2.title {
 }
 
 .sun-chart {
-  --pos-x: 75;
+  --pos-x: 85;
   margin: auto;
   width: 21.6rem;
   height: 21.6rem;

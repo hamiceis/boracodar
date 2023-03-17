@@ -1,0 +1,185 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+:root {
+  --purple: #7C3AED;
+  --gray: #F8FAFC;
+  --gray-400: #94A3BB;
+  --gray-600: #475569;
+  --gray-800: #1E293B;
+}
+
+a {
+  text-decoration: none;
+}
+
+body { 
+  font-family: 'Titillium Web', sans-serif;
+  font-size: 1.6rem;
+}
+
+main {
+  background-color: var(--gray);
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  height: 100vh;
+}
+
+.form-wrapper > img {
+  width: 15.9rem;
+  height: 5.4rem;
+  margin: 4rem 11.2rem 0;
+}
+
+.content-form {
+  margin: 11.4rem 11.2rem 10rem;
+  width: 38.4rem;
+  height: 48.3rem;
+  max-width: 38.4rem;
+}
+
+.content-form h2 {
+  font-weight: 700;
+  font-size: 3.6rem;
+  line-height: 5.5rem;
+  color: var(--gray-800);
+}
+
+.content-form p {
+  width: 35.1rem;
+  margin-top: 1.6rem;
+
+  font-weight: 400;
+  font-size: 1.6rem;
+  line-height: 2.4rem;
+  color: var(--gray-600);
+}
+
+form {
+  width: 100%;
+  margin-top: 4rem;
+ 
+}
+
+form .input-group {
+  display: grid;
+  gap: 1.6rem;
+}
+
+.input-wrapper {
+  width: 100%;
+}
+
+.input-wrapper label {
+  display: block;
+  margin-bottom: .8rem;
+  font-weight: 600;
+  font-size: 1.4rem;
+  line-height: 2.1rem;
+  color: var(--gray-800);
+}
+
+
+.input-wrapper input {
+  outline: none;
+  border: transparent;
+  background-color: transparent;
+  width: 100%;
+  display: flexbox;
+  padding: 1.6rem 1.2rem;
+  border-radius: .4rem;
+
+  font-weight: 400;
+  font-size: 14.rem;
+  line-height: 21.rem;
+
+  transition: all .5s;
+}
+
+input:focus,
+input:hover, 
+.pass:hover {
+  border: 1px solid var(--purple);
+}
+input::placeholder{
+  color: var(--gray-400);
+}
+
+.input-pass,
+.input-pass label {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: .8rem;
+}
+
+.pass {
+  width: 100%;
+  border-radius: .4rem;
+}
+
+
+.pass input {
+  border: none;
+  padding: 1.6rem 1.2rem;
+}
+
+.pass img {
+  margin-right: 1.2rem;
+  cursor: pointer;
+}
+
+.input-pass a  {
+  font-weight: 700;
+  font-size: 1.4rem;
+  line-height: 2.1rem;
+  color: var(--purple);
+}
+
+button {
+  margin-top: 3.2rem;
+  width: 100%;
+  padding: 1.6rem 2.4rem;
+  border: .4rem;
+  border-radius: .4rem;
+  background-color: var(--purple);
+  text-align: center;
+
+  color: #FFFFFF;
+  font-weight: 700;
+  font-size: 1.6rem;
+
+  transition: all .6s;
+}
+
+button:hover {
+  background-color: #9F67FF;
+  cursor: pointer;
+}
+
+.content-form form p {
+  margin-top: 3.2rem;
+  font-weight: 400;
+  font-size: 1.6rem;
+  line-height: 2.4rem;
+  color: var(--gray-600);
+}
+.content-form form p a {
+  font-weight: 700;
+  font-size: 1.6rem;
+  line-height: 2.1rem;
+  color: var(--purple);
+}
+
+
+.bg-aside {
+  width: 100%;
+  background: url(./assets/background.png) no-repeat center/cover;
+} 
