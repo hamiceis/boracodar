@@ -1,4 +1,4 @@
-<h1 align="center"> Um Formulário </h1>
+<h1 align="center"> Uma página de login </h1>
 
 <p align="center">
 <a href="https://www.rocketseat.com.br/boracodar">#boraCodar</a> são desafios semanais, promovido pela Rocketseat para ensino de tecnologias WEB. <br/>
@@ -17,7 +17,7 @@
 <br>
 
 <p align="center">
-  <img src="https://i.ibb.co/wcsr1V8/Captura-de-tela-2023-03-16-172420.jpg" width="100%">
+  <img src=".github/preview.jpg" width="100%">
 </p>
 
 ## 🚀 Tecnologias
@@ -25,13 +25,16 @@
 Esse projeto foi desenvolvido com as seguintes tecnologias:
 
 - HTML e CSS
+- JavaScript e DOM
 - Figma
 
 ## 📚 Um poudo do que vimos nesse desafio
 
-- flex
+- propriedades CSS `all`, `position`, `top`, `right`, `margin-block`, `flex`, `outline`
+- seletores CSS `> *`, `+`, `:focus`. `:disabled`, `:hover`, `::-ms-reveal`
 - responsividade
-- css variables
+- Javascript: variáveis, estrutura de repetição, condicionais (if/else) e ternários
+- DOM: `querySelectorAll()`, `getAttribute()`, `setAttribute()`, `classList`, `.toggle()`
 
 ## 🔖 Layout
 
