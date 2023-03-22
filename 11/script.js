@@ -1,20 +1,10 @@
-const pass = document.getElementById('password')
-const img = document.querySelector('.eye-close')
+function togglePassword() {
+  document
+    .querySelectorAll(".eye")
+    .forEach((eye) => eye.classList.toggle("hide"))
 
-function togglePasswordVisibility(passInput, imgElement) {
-  const isPasswordHidden = passInput.type === 'password';
-  if (isPasswordHidden) {
-    passInput.type = 'text';
-    imgElement.src = './assets/eye-on.svg';
-    imgElement.alt = 'Hide password';
-  } else {
-    passInput.type = 'password';
-    imgElement.src = './assets/eye-off.svg';
-    imgElement.alt = 'Show password';
-  }
+  const type =
+    senha.getAttribute("type") == "password" ? "text" : "password"
+
+  senha.setAttribute("type", type)
 }
-
-
-img.addEventListener('click', () => {
-  togglePasswordVisibility(pass, img)
-})
