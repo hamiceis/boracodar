@@ -38,7 +38,7 @@ a:hover {
   display: flex;
 }
 
-#page > * {
+#page > * {  /*Pega o primeiros filhos de page primeira div e img*/
   width: 50%;
 }
 

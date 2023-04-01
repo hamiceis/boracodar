@@ -10,14 +10,14 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Formulário</title>
+    <title>Document</title>
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
     <div id="page" class="flex">
       <div>
         <header>
-          <img src="./assets/logo.svg" alt="logo" />
+          <img src="./assets/logo.svg" alt="" />
         </header>
         <main>
           <div class="headline">
@@ -77,6 +77,17 @@
       <img src="./assets/bg.jpg" alt="" />
     </div>
 
-    <script src="./script.js"></script>
+    <script>
+      function togglePassword() {
+        document
+          .querySelectorAll(".eye")
+          .forEach((eye) => eye.classList.toggle("hide"))
+
+        const type =
+          senha.getAttribute("type") == "password" ? "text" : "password"
+
+        senha.setAttribute("type", type)
+      }
+    </script>
   </body>
 </html>
