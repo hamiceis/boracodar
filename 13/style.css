@@ -12,12 +12,15 @@
 }
 
 body {
-  font-size: 1.6rem;
   background: #1f2937;
 }
 
+body, input, button {
+  font-size: 1.6rem;
+  font-family: 'Source Sans Pro', sans-serif;
+}
+
 form {
-  border: 1px solid red;
   padding: 2.4rem;
   max-width: 40rem;
   margin: 0 auto;
@@ -29,6 +32,48 @@ form {
 
   perspective: 60rem; /*como definimos o #credit-card > div o position absolute, usando a prop: perspective 60, vai jogar as div para o meio  */
   /* position: relative;  - Poderiamos usar essa prop para poder posicionar seu filhos sejam relativo ao pai, porém estamos usando essa outra abordagem */
+}
+
+
+#credit-card .front .header-card {
+  margin: 1.6rem 2.4rem;
+  padding: 1.6rem 2.4rem;
+
+  display: flex;
+  justify-content: space-between;
+}
+
+#credit-card .front .middle-card {
+  margin-top: 4rem;
+  text-align: center;
+  line-height: 2rem;
+  font-size: 1.8rem;
+  word-spacing: 2.6rem;
+  color: white;
+}
+
+#credit-card .front .bottom {
+  margin: 2.4rem;
+  padding-inline: 2.4rem;
+
+  font-weight: 400;
+  font-size: 1.4rem;
+  line-height: 1.6rem;
+
+  color: #F9FAFB;
+  opacity: 0.5;
+}
+
+#credit-card .back .cvv {
+  position: absolute;
+  right: 27%;
+  bottom: 35%;
+
+  font-weight: 600;
+  font-size: 1.4rem;
+  line-height: 1.6rem;
+
+  
 }
 
 #credit-card > div {  /* Primeiros filhos "div" diretos de #credi-card, vão herdar as props height e width do #credit-card */
@@ -66,3 +111,107 @@ form {
 #credit-card:hover .back {
   transform: rotateY(0); /*Como vimos que o frente do cartão rotaciona e fica invisivel por conta da props backface e a prop de .front, então ele inverte e quem fica visivel agora é o .back */
 }
+
+/* Formulário */
+
+.flex {
+  display: flex;
+}
+
+.inputs {
+  margin-top: 4.8rem;
+
+  flex-direction: column;
+  gap: 2.4rem;
+}
+
+label {
+  font-weight: 600;
+  font-size: 1.4rem;
+  color: #E5E7EB;
+
+  align-items: center;
+  gap: .4rem;
+}
+
+input {
+  margin-top: .4rem;
+
+  width: 100%;
+
+  padding: 1.2rem;
+  border: .1rem solid #374151;
+
+  background: #111827;
+  border-radius: .4rem;
+  color: #F3F4F6;
+}
+
+input:focus {
+  outline: .15rem solid #9333EA;
+}
+
+input:invalid:focus {
+  border: 0.15rem solid #FB7185;
+}
+
+input + .warning {
+  display: none;
+}
+
+input:invalid:focus + .warning {
+  display: block;
+  margin-top: .8rem;
+  font-size: 1.4rem;
+  color: #FB7185;
+
+  display: flex;
+  align-items: center;
+  gap: .4rem;
+}
+
+.col-2 {
+  gap: 1.2rem;
+  align-items: center;
+}
+
+.col-2 .input-wrapper:nth-child(2) {
+  flex-basis: 40%;
+}
+
+.info-secuity {
+  margin-top: 4.8rem;
+
+  justify-content: center;
+  gap: .8rem;
+
+  font-size: 1.4rem;
+  color: #E5E7EB;
+}
+
+
+button {
+  margin-top: 10rem;
+
+  border: 0;
+  padding: 1.6rem;
+  width: 100%;
+
+  border-radius: .4rem;
+  
+  background-color: #9333EA;
+  box-shadow: .0rem .4rem 1.6rem rgba(0, 0, 0, 0.1);
+
+  color: #F3F4F6;
+  font-weight: 600;
+  font-size: 1.8rem;
+  line-height: 2.4rem;
+  cursor: pointer;
+
+  transition: background .4s;
+}
+
+button:hover {
+  background: #A855F7;
+}
+

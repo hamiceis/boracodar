@@ -1,24 +1,86 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="style.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
 
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@300;400;600;700&display=swap"
+      rel="stylesheet"
+    />
 
-  <title>Formulário de cartão</title>
-</head>
-<body>
-  <form>
-    <section id="credit-card">
-      <div class="front"></div>
-      <div class="back"></div>
-    </section>
-  </form>
-  <script type="module" src="script.js"></script>
-</body>
+    <title>Formulário de cartão</title>
+  </head>
+  <body>
+    <form>
+      <section id="credit-card">
+        <div class="front">
+          <div class="header-card">
+            <img src="./assets/visa.svg" alt="logo visa" />
+            <img src="./assets/sinal.svg" alt="logo da aproximação" />
+          </div>
+
+          <div class="middle-card">1234 5678 9012 3456</div>
+
+          <div class="bottom">Seu nome aqui</div>
+        </div>
+        <div class="back">
+          <div class="cvv">123</div>
+        </div>
+      </section>
+
+      <section class="inputs flex">
+        <div class="input-wrapper">
+          <label for="ccNumber">Número do cartão</label>
+          <input
+            id="ccNumber"
+            type="text"
+            placeholder="**** **** **** ****"
+            required
+          />
+          <div class="warning">
+            <img src="./assets/Warning.svg" alt="icone de alerta" />
+            Insira um numero de cartão váilido
+          </div>
+        </div>
+
+        <div class="input-wrapper">
+          <label for="ccHolder">Nome do Cliente</label>
+          <input type="text" id="ccHolder" placeholder="FULANO DA SILVA" />
+        </div>
+
+        <div class="col-2 flex">
+          <div class="input-wrapper">
+            <label for="cc-validity">Validade</label>
+            <input type="text" id="cc-validity" placeholder="mm/aa" />
+          </div>
+
+          <div class="input-wrapper">
+            <label for="cc-cvv" class="flex help"
+              >CVV
+              <img
+                src="./assets/Question.svg"
+                alt="icone de help"
+                title="Esse número está, geralmente no verso do cartão"
+              />
+            </label>
+            <input type="text" id="cc-cvv" placeholder="***" />
+          </div>
+        </div>
+      </section>
+
+      <section class="info-secuity flex">
+        <img src="./assets/ShieldCheck.svg" alt="security icone" />
+        Seus dados estão seguros
+      </section>
+
+      <button>Adicionar Cartão</button>
+    </form>
+    <script src="https://unpkg.com/imask"></script>
+    <script src="script.js"></script>
+  </body>
 </html>
