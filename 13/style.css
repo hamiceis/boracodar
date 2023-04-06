@@ -1,0 +1,68 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+:root {
+  font-size: 62.5%;
+  font-family: 'Source Sans Pro', sans-serif;
+}
+
+body {
+  font-size: 1.6rem;
+  background: #1f2937;
+}
+
+form {
+  border: 1px solid red;
+  padding: 2.4rem;
+  max-width: 40rem;
+  margin: 0 auto;
+}
+
+#credit-card {
+  width: 32.8rem;
+  height: 21.2rem;
+
+  perspective: 60rem; /*como definimos o #credit-card > div o position absolute, usando a prop: perspective 60, vai jogar as div para o meio  */
+  /* position: relative;  - Poderiamos usar essa prop para poder posicionar seu filhos sejam relativo ao pai, porém estamos usando essa outra abordagem */
+}
+
+#credit-card > div {  /* Primeiros filhos "div" diretos de #credi-card, vão herdar as props height e width do #credit-card */
+  width: inherit;   
+  height: inherit;
+
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  transition: all 1s cubic-bezier(0.175, 0.885, 0.32, 1.275); /*Essa propriedade vai fazer uma transição mais suave na rotate */
+  transform-style: preserve-3d; /* Essas duas props, vamos usar para poder fazer o efeito de flip */
+  backface-visibility: hidden; /*Isso esconde o elemento que está por trás do elemento front */
+}
+
+#credit-card .front {
+  background-image: url("./assets/front.png");
+  background-repeat: no-repeat;
+
+  transform: rotateY(0); /* Props que vão fazer a rotação do cartão*/
+}
+
+#credit-card .back {
+  background: url("./assets/back.png") no-repeat;
+  top: -5px;
+
+  transform: rotateY(-180deg); /*Parte de traz do cartão que está escondido */
+}
+#credit-card:active .front, 
+#credit-card:hover .front {
+  transform: rotateY(180deg); /*Quando passar o mouse por cima do card, o card que está na frente vai rotacionar no eixo Y de 0 para 180º.  */
+}
+
+#credit-card:active .back,
+#credit-card:hover .back {
+  transform: rotateY(0); /*Como vimos que o frente do cartão rotaciona e fica invisivel por conta da props backface e a prop de .front, então ele inverte e quem fica visivel agora é o .back */
+}
