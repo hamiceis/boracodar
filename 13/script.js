@@ -1,7 +1,12 @@
 const cardNumber = document.querySelector(".front .middle-card");
 const cardHolder = document.querySelector("#ccHolder");
 
-
+function reset() {
+  ccNumber.value = ""
+  ccValidity.value = ""
+  ccHolder.value = ""
+  cvv.value = ""
+}
 
 /*função para atualizar imagem do cartão */
 
@@ -132,6 +137,18 @@ cvv.addEventListener('blur', () => {
   front.style.transform = 'rotateY(0)';
   back.style.transform = 'rotateY(180deg)';
 });
+
+
+/* criando funcionalidade de button */
+
+const button = document.querySelector("form")
+
+button.addEventListener('submit', (e) => {
+  e.preventDefault()
+  alert("Cartão adicionado com sucesso!")
+  reset()
+})
+
 
 
 
