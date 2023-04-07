@@ -55,6 +55,8 @@ form {
 #credit-card .front .bottom {
   margin: 2.4rem;
   padding-inline: 2.4rem;
+  gap: 1.6rem;
+  align-items: center;
 
   font-weight: 400;
   font-size: 1.4rem;
@@ -62,6 +64,19 @@ form {
 
   color: #F9FAFB;
   opacity: 0.5;
+}
+
+.ccName {
+  flex-basis: 75%;
+  width: fit-content;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  text-transform: uppercase;
+}
+
+.expirationDate{
+  font-size: 1.7rem;
 }
 
 #credit-card .back .cvv {
