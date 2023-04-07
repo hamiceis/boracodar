@@ -44,7 +44,7 @@ form {
 }
 
 #credit-card .front .middle-card {
-  margin-top: 4rem;
+  margin-top: 3rem;
   text-align: center;
   line-height: 2rem;
   font-size: 1.8rem;
@@ -230,3 +230,47 @@ button:hover {
   background: #A855F7;
 }
 
+
+@media screen and (min-width: 890px) {
+  body {
+    display: grid;
+    height: 100vh;
+    place-content: center;
+    background-color: #111827;
+  }
+  form {
+    display: grid;
+    grid-template-areas: 
+      "form card"
+      "form security"
+      "btn btn";
+    grid-template-columns: max-content max-content;
+    grid-template-rows: max-content 1fr;
+    justify-content: center;
+    gap: 3.2rem;
+    padding: 3.2rem;
+    
+  }
+
+  #credit-card {
+    grid-area: card;
+    padding: 3.2rem;
+  }
+
+  #form {
+    grid-area: form;
+    margin: initial;
+  }
+
+  .info-secuity {
+    grid-area: security;
+    margin: initial;
+    align-items: center;
+  }
+
+  form button {
+    grid-area: btn;
+    margin: initial;
+    margin-top: 3.2rem;
+  }
+}
