@@ -118,5 +118,11 @@
             <td>05/04/23</td>
             <td align="center" ><a href="13"><img width="300px" src="13/.github/preview.jpg" /></a></td>
         </tr>
+        <tr>
+            <td>14</td>
+            <td><a href="14">Tela de upload de imagens</a></td>
+            <td>10/04/23</td>
+            <td align="center" ><a href="13"><img width="300px" src="14/.github/preview.jpg" /></a></td>
+        </tr>
     </tbody>
 </table></p>
