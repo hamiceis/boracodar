@@ -1,95 +1,86 @@
 <!DOCTYPE html>
 <html lang="pt-br">
   <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap"
       rel="stylesheet"
     />
 
-    <title>Página de clima</title>
-    <link rel="stylesheet" href="style.css" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Componente de Upload</title>
+
+    <link rel="stylesheet" href="./style.css" />
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
   </head>
   <body>
-    <main>
-      <header>
-        <img src="./assets/Cloud.svg" alt="Cloud upload icone" />
+    <div id="app">
+      <section class="drag-files">
+        <i class="ph ph-cloud-arrow-up"></i>
+
         <h3>Importe seus arquivos</h3>
         <p>Arraste ou clique para fazer upload</p>
-      </header>
 
-      <div class="wrapper-main">
-
-        <div class="card">
-          <div class="file">
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path d="M20.0306 7.71938L14.7806 2.46938C14.7109 2.39975 14.6282 2.34454 14.5371 2.3069C14.4461 2.26926 14.3485 2.24992 14.25 2.25H5.25C4.85218 2.25 4.47064 2.40804 4.18934 2.68934C3.90804 2.97064 3.75 3.35218 3.75 3.75V20.25C3.75 20.6478 3.90804 21.0294 4.18934 21.3107C4.47064 21.592 4.85218 21.75 5.25 21.75H18.75C19.1478 21.75 19.5294 21.592 19.8107 21.3107C20.092 21.0294 20.25 20.6478 20.25 20.25V8.25C20.2501 8.15148 20.2307 8.05391 20.1931 7.96286C20.1555 7.87182 20.1003 7.78908 20.0306 7.71938ZM14.25 8.25V4.125L18.375 8.25H14.25Z" fill="#AC96E4"/>
-              </svg>              
+        <input type="file" />
+      </section>
+      <section class="files">
+        <div class="box uploading">
+          <div class="icon">
+            <i class="ph-fill ph-file"></i>
           </div>
           <div class="info">
-            <div class="info-file">
-              <div class="title">
-                <h4>Scann_158.pdf</h4>
-                <span>30 MB / 74 MB</span>
-              </div>
-              <img src="./assets/Cancel.svg" alt="icone de cancel" />
+            <div class="filename">Scann_158.pdf</div>
+            <div class="filesize">
+              <span>30 MB / </span>
+              <span>70 MB</span>
             </div>
-            <div class="wrapper-progress">
-              <progress class="progress-bar" value="46" max="100"></progress>
+            <div class="bar">
+              <progress value="46" max="100"></progress>
               <span>46%</span>
             </div>
           </div>
+          <div class="action">
+            <i class="ph ph-x"></i>
+          </div>
         </div>
-
-        <div class="card">
-          <div class="file">
-            <svg width="18" height="20" viewBox="0 0 18 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path d="M17.0306 5.71938L11.7806 0.469375C11.7109 0.399749 11.6282 0.344539 11.5371 0.306898C11.4461 0.269257 11.3485 0.249923 11.25 0.25H2.25C1.85218 0.25 1.47064 0.408035 1.18934 0.68934C0.908035 0.970645 0.75 1.35218 0.75 1.75V18.25C0.75 18.6478 0.908035 19.0294 1.18934 19.3107C1.47064 19.592 1.85218 19.75 2.25 19.75H15.75C16.1478 19.75 16.5294 19.592 16.8107 19.3107C17.092 19.0294 17.25 18.6478 17.25 18.25V6.25C17.2501 6.15148 17.2307 6.05391 17.1931 5.96286C17.1555 5.87182 17.1003 5.78908 17.0306 5.71938ZM11.25 6.25V2.125L15.375 6.25H11.25Z" fill="#73B172"/>
-              </svg>
-              
-              
+        <div class="box done">
+          <div class="icon">
+            <i class="ph-fill ph-file"></i>
           </div>
           <div class="info">
-            <div class="info-file">
-              <div class="title">
-                <h4>README.rm</h4>
-                <span>12 KB</span>
-              </div>
+            <div class="filename">README.md</div>
+            <div class="filesize">
+              <span>12 KB</span>
             </div>
-            <div class="wrapper-progress">
-              <progress class="progress-bar" value="100" max="100"></progress>
+            <div class="bar">
+              <progress value="100" max="100"></progress>
               <span>100%</span>
             </div>
           </div>
         </div>
-
-        <div class="card">
-          <div class="file">
-            <svg width="18" height="20" viewBox="0 0 18 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path d="M17.0306 5.71938L11.7806 0.469375C11.7109 0.399749 11.6282 0.344539 11.5371 0.306898C11.4461 0.269257 11.3485 0.249923 11.25 0.25H2.25C1.85218 0.25 1.47064 0.408035 1.18934 0.68934C0.908035 0.970645 0.75 1.35218 0.75 1.75V18.25C0.75 18.6478 0.908035 19.0294 1.18934 19.3107C1.47064 19.592 1.85218 19.75 2.25 19.75H15.75C16.1478 19.75 16.5294 19.592 16.8107 19.3107C17.092 19.0294 17.25 18.6478 17.25 18.25V6.25C17.2501 6.15148 17.2307 6.05391 17.1931 5.96286C17.1555 5.87182 17.1003 5.78908 17.0306 5.71938ZM11.25 6.25V2.125L15.375 6.25H11.25Z" fill="#E36363"/>
-              </svg>              
-              
+        <div class="box error">
+          <div class="icon">
+            <i class="ph-fill ph-file"></i>
           </div>
           <div class="info">
-            <div class="info-file">
-              <div class="title">
-                <h4>Picture1.jpeg</h4>
-                <span>6.3 MB</span>
-              </div>
-              <img src="./assets/Retry.svg" alt="icone de retry" />
+            <div class="filename">picture1.jpeg</div>
+            <div class="filesize">
+              <span>6.3 MB</span>
             </div>
-            <div class="wrapper-progress">
-              <progress class="progress-bar" value="0" max="100"></progress>
+            <div class="bar">
+              <progress value="0" max="100"></progress>
               <span>Erro</span>
             </div>
           </div>
+          <div class="action">
+            <i class="ph ph-arrow-counter-clockwise"></i>
+          </div>
         </div>
+      </section>
+    </div>
 
-      </div>
-    </main>
+    <script src="./main.js"></script>
   </body>
 </html>
