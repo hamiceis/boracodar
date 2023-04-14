@@ -1,0 +1,190 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+:root {
+  font-size: 62.5%;
+}
+
+html, body {
+  font-family: 'Titillium Web', sans-serif;
+}
+
+body {
+  font-size: 1.6rem;
+  display: grid;
+  place-content: center;
+}
+
+#app {
+  margin: 8rem 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.6rem;
+}
+
+.card {
+  width: 32rem;
+  padding: 2.4rem;
+  background: #FFFFFF;
+
+  border: 1px solid #E2E8F0;
+  border-radius: 1rem;
+}
+
+.card.ultimate > p,
+.card.enterprise > p,
+.card.essentials > p {
+  color: #7C3AED;
+  font-weight: 600;
+  font-size: 1.4rem;
+  line-height: 21px;
+  letter-spacing: 0.06em;
+}
+
+
+.plan {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: .8rem;
+  
+}
+
+.plan h4 {
+  font-weight: 700;
+  font-size: 2.4rem;
+  line-height: 3.7rem;
+  color: #1E293B;
+}
+
+.plan span {
+  font-weight: 700;
+  font-size: 2rem;
+  line-height: 3rem;
+  color: #1E293B;
+}
+
+.plan p {
+  font-weight: 400;
+  font-size: 1.8rem;
+  line-height: 2.7rem;
+}
+
+.card.enterprise > button,
+.card.ultimate > button,
+.card.essentials > button {
+  padding: 1.6rem 2.4rem;
+  margin-block: 1.6rem;
+  width: 100%;
+
+  border: 1px solid #1E293B;
+  border-radius: .4rem;
+
+  color: #1E293B;
+  background-color: transparent;
+
+  font-weight: 700;
+  font-size: 1.6rem;
+  line-height: 2.4rem;
+
+  cursor: pointer;
+}
+
+.info::before {
+  content: '';
+  border: .125rem solid #E2E8F0;
+  margin-block: .8rem;
+}
+
+.info {
+  display: flex;
+  flex-direction: column;
+  gap: 1.6rem;
+}
+
+.info .content {
+  display: flex;
+  justify-content: space-between;
+
+  font-weight: 400;
+  font-size: 1.6rem;
+  line-height: 2.4rem;
+  letter-spacing: 0.06em;
+
+  color: #475569;
+}
+
+.info .content div {
+  display: flex;
+  gap: .8rem;
+}
+
+/* 2 card */
+
+.card.ultimate {
+  padding-top: 4rem;
+  background-color: #0F172A;
+  position: relative;
+}
+
+.card.ultimate .special {
+  padding: .8rem 1.6rem;
+  background: #FBA94C;
+  border-radius: 6px;
+
+  font-weight: 700;
+  font-size: 1.2rem;
+  line-height: 1.8rem;
+  letter-spacing: 0.06em;
+
+  top: -17px;
+  left: calc(50% - 133px/2 - 0.5px);
+  position: absolute;
+}
+
+.card.ultimate .plan * {
+  color: #F8FAFC;
+}
+
+.card.ultimate .plan span {
+  font-weight: 700;
+  font-size: 2rem;
+  line-height: 3rem;
+}
+
+.card.ultimate > p {
+  color: #996DFF;
+}
+
+.card.ultimate > button {
+  background:#996DFF;
+  color: #F8FAFC;
+}
+
+.card.ultimate .info::before {
+  border-color: #334155;
+}
+
+.card.ultimate .content p {
+  color: #CBD5E1;
+}
+
+@media screen and (min-width: 940px) {
+  
+  #app {
+    min-width: 90%;
+    flex-direction: row;
+    justify-content: center;
+    gap: 3.2rem;
+  }
+
+  .card {
+    width: 38.4rem;
+    padding: 4.8rem 3.2rem;
+  }
+}
