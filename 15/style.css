@@ -34,6 +34,12 @@ body {
 
   border: 1px solid #E2E8F0;
   border-radius: 1rem;
+  transition: transform .5s ease-in-out;
+}
+
+.card:hover {
+  border-color: #996DFF;
+  transform: scale(1.1);
 }
 
 .card.ultimate > p,
@@ -93,7 +99,16 @@ body {
   line-height: 2.4rem;
 
   cursor: pointer;
+  transition: all .5s;
 }
+
+.card.essentials > button:hover, 
+.card.enterprise > button:hover {
+  background-color: #1E293B;
+  color: #F8FAFC;
+}
+
+
 
 .info::before {
   content: '';
@@ -127,6 +142,7 @@ body {
 /* 2 card */
 
 .card.ultimate {
+  margin-top: 1.6rem;
   padding-top: 4rem;
   background-color: #0F172A;
   position: relative;
@@ -166,6 +182,10 @@ body {
   color: #F8FAFC;
 }
 
+card.ultimate > button:hover {
+  background-color: #7C3AED;
+}
+
 .card.ultimate .info::before {
   border-color: #334155;
 }
@@ -174,7 +194,8 @@ body {
   color: #CBD5E1;
 }
 
-@media screen and (min-width: 940px) {
+
+@media screen and (min-width: 980px) {
   
   #app {
     min-width: 90%;
