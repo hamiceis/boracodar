@@ -2,210 +2,250 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
 }
 
 :root {
-  font-size: 62.5%;
+  --color-gray-50: #f8fafc;
+  --color-gray-100: #f1f5f9;
+  --color-gray-200: #e2e8f0;
+  --color-gray-300: #cbd5e1;
+  --color-gray-400: #94a3b8;
+  --color-gray-500: #64748b;
+  --color-gray-600: #475569;
+  --color-gray-700: #334155;
+  --color-gray-800: #1e293b;
+  --color-gray-900: #0f172a;
+  --color-green-100: #04d361;
+  --color-green-200: #1b873f;
+  --color-purple-100: #996dff;
+  --color-purple-200: #7c3aed;
+  --color-white: #ffffff;
+  --color-orange: #fba94c;
 }
 
-html, body {
-  font-family: 'Titillium Web', sans-serif;
-}
-
+html,
 body {
-  font-size: 1.6rem;
+  font-family: "Titillium Web", sans-serif;
+  background-color: var(--color-gray-50);
+}
+
+.pricing-table {
   display: grid;
-  place-content: center;
+  gap: 24px;
+  padding: 24px;
 }
 
-#app {
-  margin: 8rem 2rem;
-  display: flex;
-  flex-direction: column;
-  gap: 1.6rem;
+section {
+  width: 320px;
+  margin: auto;
 }
 
-.card {
-  width: 32rem;
-  padding: 2.4rem;
-  background: #FFFFFF;
+section .inner {
+  padding: 24px;
+  background-color: var(--color-white);
 
-  border: 1px solid #E2E8F0;
-  border-radius: 1rem;
-  transition: transform .5s ease-in-out;
+  border: 1px solid var(--color-gray-200);
+  border-radius: 10px;
 }
 
-.card:hover {
-  border-color: #996DFF;
-  transform: scale(1.1);
-}
-
-.card.ultimate > p,
-.card.enterprise > p,
-.card.essentials > p {
-  color: #7C3AED;
+.inner p {
   font-weight: 600;
-  font-size: 1.4rem;
+  font-size: 14px;
   line-height: 21px;
   letter-spacing: 0.06em;
+  text-transform: uppercase;
+
+  color: var(--color-purple-200);
 }
 
-
-.plan {
+.title-price {
+  margin-top: 8px;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  margin-top: .8rem;
-  
 }
 
-.plan h4 {
+.title {
   font-weight: 700;
-  font-size: 2.4rem;
-  line-height: 3.7rem;
-  color: #1E293B;
+  font-size: 24px;
+  line-height: 37px;
+
+  color: var(--color-gray-800);
 }
 
-.plan span {
-  font-weight: 700;
-  font-size: 2rem;
-  line-height: 3rem;
-  color: #1E293B;
+.price {
+  font-size: 18px;
+  line-height: 27px;
+
+  color: var(--color-gray-800);
 }
 
-.plan p {
-  font-weight: 400;
-  font-size: 1.8rem;
-  line-height: 2.7rem;
+.price strong {
+  font-size: 20px;
+  line-height: 30px;
 }
 
-.card.enterprise > button,
-.card.ultimate > button,
-.card.essentials > button {
-  padding: 1.6rem 2.4rem;
-  margin-block: 1.6rem;
+button {
+  background: transparent;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 16px 24px;
   width: 100%;
 
-  border: 1px solid #1E293B;
-  border-radius: .4rem;
+  border: 1px solid var(--color-gray-800);
+  border-radius: 4px;
 
-  color: #1E293B;
-  background-color: transparent;
+  margin-top: 16px;
 
   font-weight: 700;
-  font-size: 1.6rem;
-  line-height: 2.4rem;
+  font-size: 16px;
+  line-height: 24px;
+
+  color: var(--color-gray-800);
 
   cursor: pointer;
-  transition: all .5s;
 }
 
-.card.essentials > button:hover, 
-.card.enterprise > button:hover {
-  background-color: #1E293B;
-  color: #F8FAFC;
+button.primary:hover {
+  background-color: var(--color-gray-800);
+  color: var(--color-white);
 }
 
+ul {
+  border-top: 1px solid var(--color-gray-200);
+  padding-top: 16px;
+  margin-top: 16px;
 
+  list-style: none;
 
-.info::before {
-  content: '';
-  border: .125rem solid #E2E8F0;
-  margin-block: .8rem;
+  display: grid;
+  gap: 16px;
 }
 
-.info {
+li {
   display: flex;
-  flex-direction: column;
-  gap: 1.6rem;
+  align-items: center;
+  gap: 8px;
 }
 
-.info .content {
-  display: flex;
-  justify-content: space-between;
-
-  font-weight: 400;
-  font-size: 1.6rem;
-  line-height: 2.4rem;
+li span {
+  flex: 1;
+  font-size: 16px;
+  line-height: 24px;
   letter-spacing: 0.06em;
 
-  color: #475569;
+  color: var(--color-gray-600);
 }
 
-.info .content div {
-  display: flex;
-  gap: .8rem;
+li i.ph-check {
+  font-size: 20px;
+  color: var(--color-green-200);
 }
 
-/* 2 card */
+li i.ph-info {
+  font-size: 16px;
+  color: var(--color-gray-900);
+}
 
-.card.ultimate {
-  margin-top: 1.6rem;
-  padding-top: 4rem;
-  background-color: #0F172A;
+.enterprise .title {
+  font-size: 32px;
+  line-height: 49px;
+}
+
+.enterprise button {
+  margin-top: 32px;
+}
+
+.enterprise ul {
+  padding-top: 32px;
+  margin-top: 32px;
+}
+
+section.best {
+  margin-top: 16px;
   position: relative;
 }
 
-.card.ultimate .special {
-  padding: .8rem 1.6rem;
-  background: #FBA94C;
+section.best::before {
+  content: "MAIS VANTAJOSO";
+  font-weight: 700;
+  font-size: 12px;
+  line-height: 18px;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--color-gray-900);
+
+  display: inline-block;
+
+  background-color: var(--color-orange);
+  padding: 8px 16px;
   border-radius: 6px;
 
-  font-weight: 700;
-  font-size: 1.2rem;
-  line-height: 1.8rem;
-  letter-spacing: 0.06em;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
 
   top: -17px;
-  left: calc(50% - 133px/2 - 0.5px);
-  position: absolute;
 }
 
-.card.ultimate .plan * {
-  color: #F8FAFC;
+.ultimate .inner {
+  padding-top: 40px;
+  background-color: var(--color-gray-900);
 }
 
-.card.ultimate .plan span {
-  font-weight: 700;
-  font-size: 2rem;
-  line-height: 3rem;
+.ultimate .title,
+.ultimate .price {
+  color: var(--color-gray-50);
 }
 
-.card.ultimate > p {
-  color: #996DFF;
+.inner p {
+  color: var(--color-purple-100);
 }
 
-.card.ultimate > button {
-  background:#996DFF;
-  color: #F8FAFC;
+button.secondary {
+  background-color: var(--color-purple-100);
+  color: var(--color-white);
 }
 
-card.ultimate > button:hover {
-  background-color: #7C3AED;
+button.secondary:hover {
+  background-color: var(--color-purple-200);
 }
 
-.card.ultimate .info::before {
-  border-color: #334155;
+.ultimate ul {
+  border-color: var(--color-gray-700);
 }
 
-.card.ultimate .content p {
-  color: #CBD5E1;
+.ultimate li span {
+  color: var(--color-gray-300);
 }
 
+.ultimate li .ph-info {
+  color: var(--color-gray-500);
+}
 
-@media screen and (min-width: 980px) {
-  
-  #app {
-    min-width: 90%;
-    flex-direction: row;
-    justify-content: center;
-    gap: 3.2rem;
-  }
+/*transition animation*/
+section .inner:hover {
+  border-color: var(--color-purple-100);
+}
 
-  .card {
-    width: 38.4rem;
-    padding: 4.8rem 3.2rem;
+section .inner {
+  transition: border 300ms;
+}
+
+section:hover {
+  transform: scale(1.05);
+}
+
+section {
+  transition: transform 300ms;
+  animation: appear 400ms backwards var(--delay);
+}
+
+@keyframes appear {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
   }
 }
