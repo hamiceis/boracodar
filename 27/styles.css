@@ -1,0 +1,20 @@
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  -webkit-font-smoothing: antialiased;
+}
+
+:root {
+	--color-gray-01: #d5d5f2;
+	--color-gray-02: #e2e2f5;
+	--color-purple: #bf7bfb;
+	--color-blue: #151557;
+	--color-blue-light: #212187;
+	--color-dark-blue: #000013;
+}
+
+body {
+  height: 100vh;
+  width: 100%;
+}

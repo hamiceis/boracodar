@@ -1,0 +1,122 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  -webkit-font-smoothing: antialiased;
+}
+
+html,
+:root {
+  font-size: 62.5%;
+}
+
+body {
+  display: grid;
+  place-content: center;
+
+  height: 100vh;
+
+  font-size: 1.6rem;
+  font-family: 'Raleway', sans-serif;
+
+  background: #242424;
+  color: #fff;
+}
+
+main {
+  width: 430px;
+  height: 932px;
+  background-color: #151515;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 52px;
+
+  position: relative;
+  overflow: hidden;
+}
+
+span {
+  font-size: 3rem;
+  line-height: 3.8rem;
+  text-align: center;
+
+  margin: 350px 0 100px;
+}
+
+i {
+  font-size: 2.4rem;
+}
+
+main .controls {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 321px;
+  gap: 82px;
+}
+
+
+.hue,
+.brightness,
+.contrast {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+
+.hue > div,
+.brightness > div,
+.contrast > div {
+  display: flex;
+  align-items: center;
+  height: 5px;
+  border-radius: 12px;
+  background-color: #fff;
+}
+
+
+.hue > div {
+background: linear-gradient(90deg, #F00 5.21%, #FF8A00 16.48%, #FFE600 27.74%, #14FF00 39.35%, #00A3FF 49.37%, #0500FF 61.18%, #AD00FF 72.26%, #FF00C7 83.53%, #F00 94.61%);
+}
+
+input[type="range"] {
+  width: 281px;
+  height: 5px;
+  appearance: none;
+  background-color: transparent;
+}
+
+.hue > div > input[type="range"]::-webkit-slider-thumb,
+.brightness > div > input[type="range"]::-webkit-slider-thumb,
+.contrast > div > input[type="range"]::-webkit-slider-thumb {
+  width: 18px;
+  height: 18px;
+  border: 3px solid white;
+  background-color: transparent;
+  appearance: none;
+  border-radius: 50%;
+  cursor: pointer;
+
+  display: flex;
+  align-items: center;
+}
+
+.brightness > div > input[type="range"]::-webkit-slider-thumb,
+.contrast > div > input[type="range"]::-webkit-slider-thumb {
+  background-color: #151515;
+  border: 3px solid #fff;
+}
+
+main .preview {
+  display: flex;
+  width: 800px;
+  height: 800px;
+  background-color: red;
+  border-radius: 50%;
+  box-shadow: 0px 0px 53px 13px red;
+  position: absolute;
+  top: -500px;
+}

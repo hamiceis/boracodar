@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;700&family=Titillium+Web:wght@700&display=swap"
+    rel="stylesheet">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <title>Formulário multi-step - desafio 23</title>
+</head>
+
+<body>
+  <main id="app">
+    <form>
+      <div class="step-progress">
+        <strong class="active" data-step>Contato</strong>
+        <svg xmlns="http://www.w3.org/2000/svg" width="21" height="20" viewBox="0 0 21 20" fill="none">
+          <g clip-path="url(#clip0_408_260)">
+            <path d="M8.41663 5L13.4166 10L8.41663 15" stroke="#323238" stroke-width="2" stroke-linecap="square" />
+          </g>
+          <defs>
+            <clipPath id="clip0_408_260">
+              <rect width="20" height="20" fill="white" transform="translate(0.5)" />
+            </clipPath>
+          </defs>
+        </svg>
+
+        <strong data-step>Empresa</strong>
+        <svg xmlns="http://www.w3.org/2000/svg" width="21" height="20" viewBox="0 0 21 20" fill="none">
+          <g clip-path="url(#clip0_408_260)">
+            <path d="M8.41663 5L13.4166 10L8.41663 15" stroke="#323238" stroke-width="2" stroke-linecap="square" />
+          </g>
+          <defs>
+            <clipPath id="clip0_408_260">
+              <rect width="20" height="20" fill="white" transform="translate(0.5)" />
+            </clipPath>
+          </defs>
+        </svg>
+
+        <strong data-step>Projeto</strong>
+        <svg xmlns="http://www.w3.org/2000/svg" width="21" height="20" viewBox="0 0 21 20" fill="none">
+          <g clip-path="url(#clip0_408_260)">
+            <path d="M8.41663 5L13.4166 10L8.41663 15" stroke="#323238" stroke-width="2" stroke-linecap="square" />
+          </g>
+          <defs>
+            <clipPath id="clip0_408_260">
+              <rect width="20" height="20" fill="white" transform="translate(0.5)" />
+            </clipPath>
+          </defs>
+        </svg>
+      </div>
+
+      <div class="form-step active">
+        <div class="content">
+          <div class="input-wrapper">
+            <label for="name">Nome</label>
+            <input id="name" type="text" name="name" placeholder="Como prefere ser chamado" required>
+          </div>
+
+          <div class="input-wrapper">
+            <label for="phone">Telefone</label>
+            <input id="phone" type="tel" name="phone" placeholder="Digite seu número de WhatsApp"
+              onkeypress="return /\d/.test(event.key)">
+          </div>
+
+          <div class="input-wrapper">
+            <label for="email">E-mail</label>
+            <input id="email" type="email" name="email" placeholder="Digite seu e-mail" required>
+          </div>
+
+        </div>
+
+        <div class="button-wrapper justify-end">
+          <button type="button" class="btn primary " data-action="next">CONTINUAR</button>
+        </div>
+      </div>
+
+      <div class="form-step hide">
+        <div class="content">
+          <div class="input-wrapper">
+            <label for="business-name">Nome da empresa</label>
+            <input id="business-name" type="text" name="business-name" placeholder="Qual o nome da empresa" required>
+          </div>
+
+          <div class="input-wrapper">
+            <label for="business-colab-number">Número de funcionários</label>
+            <input id="business-colab-number" type="tel" name="business-colab-number" placeholder="Digite seu número de colaboradores"
+              onkeypress="return /\d/.test(event.key)">
+          </div>
+
+          <div class="input-wrapper">
+            <label for="business-about">Sobre seu negócio</label>
+            <textarea id="business-about" name="business-about" placeholder="Fale um pouco sobre seus produtos e serviços"></textarea>
+          </div>
+
+        </div>
+
+        <div class="button-wrapper">
+          <button type="button" class="btn secondary" data-action="prev">VOLTAR</button>
+          <button type="button" class="btn primary" data-action="next">CONTINUAR</button>
+        </div>
+      </div>
+
+      <div class="form-step hide">
+        <div class="content">
+          
+
+          <div class="input-wrapper">
+            <label for="project">Objetivos do projeto</label>
+            <textarea id="project" name="project" placeholder="Descreva quais objetivos deste projeto"></textarea>
+          </div>
+
+        </div>
+
+        <div class="button-wrapper">
+          <button type="button" class="btn secondary" data-action="prev">VOLTAR</button>
+          <button class="btn primary" type="submit">ENVIAR RESPOSTA</button>
+        </div>
+      </div>
+
+    </form>
+  </main>
+
+
+  <script type="module" src="app.js"></script>
+</body>

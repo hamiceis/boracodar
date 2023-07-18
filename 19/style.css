@@ -1,0 +1,155 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  -webkit-font-smoothing: antialiased;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-family: "Inter", sans-serif;
+  font-size: 1.6rem;
+  background: #000000;
+  display: grid;
+  place-content: center;
+
+  width: 100%;
+  height: 100vh;
+}
+
+#container {
+  display: flex;
+  flex-direction: column;
+  gap: 9.9rem;
+  background-color: #fff;
+  padding: 2.4rem 5.6rem;
+  border-radius: 4rem;
+}
+
+header {
+  margin-top: 9.9rem;
+}
+
+header h2,
+header span {
+  font-weight: 700;
+  font-size: 4rem;
+  line-height: 4.8rem;
+  color: #372d3b;
+}
+
+header span {
+  color: #864293;
+}
+
+header p {
+  font-weight: 500;
+  font-size: 2.5rem;
+  line-height: 3rem;
+  color: #372d3b;
+}
+
+main {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+main .motorist {
+  display: flex;
+}
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.star {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  width: 10rem;
+  gap: 9.8px;
+
+  padding: 0.4rem 1rem;
+  border-radius: 15.6862px;
+  color: #fff;
+  background: #372d3b;
+
+  position: absolute;
+  bottom: -13px;
+  
+}
+
+.wrapper > p {
+  font-weight: 700;
+  font-size: 1.8rem;
+  line-height: 2.2rem;
+  color: #372d3b;
+  position: relative;
+
+  bottom: -83px;
+  
+}
+
+.wrapper img {
+  position: absolute;
+}
+
+main .info {
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+}
+
+.info strong {
+  font-weight: 700;
+  font-size: 4.1rem;
+  line-height: 5rem;
+  color: #372d3b;
+  text-transform: uppercase;
+}
+
+.info span {
+  font-weight: 500;
+  font-size: 2.4rem;
+  line-height: 3rem;
+  color: #372d3b;
+}
+
+
+footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 3.2rem;
+}
+
+footer input {
+  all: unset;
+  padding: 1.7rem 2.9rem;
+  background: #F5EDF7;
+  border-radius: 2.4rem;
+
+  font-weight: 500;
+  font-size: 2.4rem;
+  line-height: 2.9rem;
+
+  flex: 1;
+}
+
+.icons {
+  display: flex;
+  gap: 4rem;
+}
+
+footer .icons i {
+  font-size: 4.8rem;
+}
