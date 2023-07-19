@@ -1,0 +1,169 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  -webkit-font-smoothing: antialiased;
+}
+
+:root {
+	--color-gray-01: #f8fafc;
+	--color-gray-02: #e2e8f0;
+	--color-gray-03: #94a3b8;
+	--color-gray-04: #334155;
+	--color-gray-05: #1e293b;
+	--color-gray-06: #0f172a;
+	--color-gray-07: #020617;
+}
+
+
+body {
+  font-family: 'IBM Plex Sans', sans-serif;
+
+  height: 100vh;
+  width: 100%;
+
+  background: url('./assets/bg.jpg') no-repeat center center/cover;
+
+  display: grid;
+  place-content: center;
+}
+
+#app {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  border-radius: 2rem;
+  border: 1px solid var(--color-gray-04);
+  background: rgba(2, 6, 23, 0.80);
+
+  padding: 3.75rem;
+  gap: 2.5rem;
+}
+
+header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.icon {
+  display: flex;
+  width: 4rem;
+  height: 4rem;
+  padding: 0.75rem;
+  justify-content: center;
+  align-items: center;
+
+  border-radius: 1rem;
+  border: 1px solid var(--gray-05, #1E293B);
+  background: var(--gray-06, #0F172A);
+}
+
+.icon i {
+  font-size: 2.5rem;
+}
+
+i {
+  font-size: 2rem;
+  flex-shrink: 0;
+
+  color: var(--color-gray-03);
+}
+
+header h1 {
+  color: var(--gray-01, #F8FAFC);
+  text-align: center;
+  font-size: 2rem;
+  font-weight: 600;
+  line-height: normal;
+}
+
+main {
+  display: grid;
+  gap: 1rem;
+
+  width: 38rem;
+  max-width: 38rem;
+}
+
+.card-button {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1.5rem;
+
+  padding: 1rem;
+  
+
+  border-radius: 1rem;
+  border: 1px solid var(--gray-04, #334155);
+  background: var(--gray-06, #0F172A);
+}
+
+.card-button:hover {
+  opacity: .8;
+  cursor: pointer;
+}
+
+.card-button span {
+  color: var(--color-gray-02);
+  font-size: 1.125rem;
+  font-weight: 600;
+  line-height: normal;
+
+  flex-grow: 1;
+}
+
+hr {
+  width: 68.5rem;
+  height: 0.0625rem;
+
+  background: #334155;
+}
+
+footer {
+  width: 100%;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+
+}
+
+.input-wrapper {
+  display: flex;
+  padding: 1rem;
+  align-items: center;
+  gap: 1rem;
+  flex: 1 0 0;
+
+  border-radius: 1rem;
+  border: 1px solid var(--gray-04, #334155);
+  background: var(--gray-06, #0F172A);
+}
+
+.input-wrapper i {
+  font-size: 2rem;
+}
+
+input {
+  outline: none;
+  border: none;
+  background-color: transparent;
+
+  width: 30rem;
+
+  color: var(--gray-02, #E2E8F0);
+  font-size: 1.125rem;
+  font-weight: 400;
+  line-height: normal;
+}
+
+
+footer button:hover {
+  cursor: pointer;
+  opacity: .8;
+}
