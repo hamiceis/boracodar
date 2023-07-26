@@ -116,9 +116,9 @@ main {
   flex-grow: 1;
 }
 
-hr {
+.line {
   width: 68.5rem;
-  height: 0.0625rem;
+  height: 0.100rem;
 
   background: #334155;
 }

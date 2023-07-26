@@ -1,0 +1,172 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  -webkit-font-smoothing: antialiased;
+}
+
+:root {
+	--color-gray-01: #f8fafc;
+	--color-gray-02: #e2e8f0;
+	--color-gray-03: #94a3b8;
+	--color-gray-04: #334155;
+	--color-gray-05: #1e293b;
+	--color-gray-06: #0f172a;
+	--color-gray-07: #020617;
+}
+
+body {
+  font-family: 'IBM Plex Sans', sans-serif;
+  background-image: url('./assets/bg.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+
+  color: var(--color-gray-02);
+
+  width: 100%;
+  height: 100vh;
+}
+
+main {
+  height: 100vh;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 1216px;
+
+  gap: 40px;
+  padding: 3.75rem;
+
+  border-radius: 32px;
+  border: 1px solid var(--color-gray-04);
+
+  background-color: rgba(2, 6, 23, 0.80);
+}
+
+header div img {
+  padding: 12px;
+
+  border-radius: 16px;
+  border: 1px solid var(--color-gray-05);
+  background-color: var(--color-gray-06);
+}
+
+h1 {
+  color: var(--gray-01, #F8FAFC);
+  text-align: center;
+  font-size: 2rem;
+  font-weight: 600;
+  line-height: normal;
+}
+
+.ia-tools {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+} 
+
+.tools {
+  display: flex;  
+  padding: 16px;
+  justify-content: space-between;
+  align-items: center;
+
+
+  width: 608px;
+  height: 96px;
+
+
+  border-radius: 16px;
+  border: 1px solid var(--color-gray-04);
+  background-color: var(--color-gray-06);
+}
+
+.tools div {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+}
+
+.icons {
+  padding: 16px;
+  border-radius: 16px;
+  border: 1px solid var(--color-gray-05);
+  background-color: var(--color-gray-06);
+}
+
+i {
+  font-size: 32px;
+  color: var(--color-gray-03);
+}
+
+.tools div p {
+  color: var(--color-gray-02);
+  font-size: 1.125rem;
+  font-weight: 600;
+  line-height: normal;
+}
+
+.arrow {
+  padding: 16px;
+}
+
+span {
+  height: 1px;
+  width: 1096px;
+  background-color: #334155;
+}
+
+.prompt {
+  display: flex;
+  gap: 16px;
+  align-items: center;
+  width: 100%;
+}
+
+.prompt > div {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  
+
+  padding: 16px;
+
+  border-radius: 16px;
+  border: 1px solid var(--color-gray-04);
+  background: var(--color-gray-06);
+}
+
+.prompt > div:first-child {
+  width: 100%;
+}
+
+button, input {
+  background-color: transparent;
+  border: none;
+}
+
+input,
+input::placeholder {
+  outline: none; 
+
+  width: 100%;
+  border: none;
+
+  font-size: 18px;
+  font-weight: 400;
+  line-height: normal;
+  color: var(--color-gray-02);
+}
+
+.ph-paper-plane-right {
+  color: var(--color-gray-01);
+}
