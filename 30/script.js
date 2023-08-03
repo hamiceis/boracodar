@@ -4,7 +4,7 @@ async function getMovies() {
     method: 'GET',
     headers: {
       accept: 'application/json',
-      Authorization: 'Bearer eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiJhNTNjMWY3MDUzNzRlMzFjN2Y0YzQwNmQ4MDBkNTE5YiIsInN1YiI6IjY0YzY4ZmU4ZWVjNWI1MDBmZjUyNGYwMyIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.H2gzkxXiU0-Fb2wKqMHzqmsVcK8zfGsh2hXKqJK4xFg'
+      Authorization: 'Bearer eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiJkYzY4ZDc3ZGEwZjI5MDY5YzkxZWQxNzg2ZTY2OGQ4NSIsInN1YiI6IjYyZjRmN2UxZDJmNWI1MDA3ZDkyOGFhNCIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.EqMxu8WZjSwSOHwsMior7kUhEHM7cwj-P3NfdfO20J0'
     }
   };
 
@@ -24,7 +24,7 @@ async function getMoreInfo(id) {
     method: 'GET',
     headers: {
       accept: 'application/json',
-      Authorization: 'Bearer eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiJhNTNjMWY3MDUzNzRlMzFjN2Y0YzQwNmQ4MDBkNTE5YiIsInN1YiI6IjY0YzY4ZmU4ZWVjNWI1MDBmZjUyNGYwMyIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.H2gzkxXiU0-Fb2wKqMHzqmsVcK8zfGsh2hXKqJK4xFg'
+      Authorization: 'Bearer eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiJkYzY4ZDc3ZGEwZjI5MDY5YzkxZWQxNzg2ZTY2OGQ4NSIsInN1YiI6IjYyZjRmN2UxZDJmNWI1MDA3ZDkyOGFhNCIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.EqMxu8WZjSwSOHwsMior7kUhEHM7cwj-P3NfdfO20J0'
     }
   };
 
@@ -45,7 +45,7 @@ async function watch(e) {
     method: 'GET',
     headers: {
       accept: 'application/json',
-      Authorization: 'Bearer eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiJhNTNjMWY3MDUzNzRlMzFjN2Y0YzQwNmQ4MDBkNTE5YiIsInN1YiI6IjY0YzY4ZmU4ZWVjNWI1MDBmZjUyNGYwMyIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.H2gzkxXiU0-Fb2wKqMHzqmsVcK8zfGsh2hXKqJK4xFg'
+      Authorization: 'Bearer eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiJkYzY4ZDc3ZGEwZjI5MDY5YzkxZWQxNzg2ZTY2OGQ4NSIsInN1YiI6IjYyZjRmN2UxZDJmNWI1MDA3ZDkyOGFhNCIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.EqMxu8WZjSwSOHwsMior7kUhEHM7cwj-P3NfdfO20J0'
     }
   };
 
@@ -113,7 +113,7 @@ function createMovieLayout({
 }
 
 function select3Videos(results) {
-  const random = ()=> Math.floor(Math.random() * results.length)
+  const random = () => Math.floor(Math.random() * results.length)
 
   let selectedVideos = new Set()
   while(selectedVideos.size < 3) {
@@ -121,7 +121,9 @@ function select3Videos(results) {
   }
 
   return [...selectedVideos]
+  console.log([...selectedVideos])
 }
+
 
 function minutesToHourMinutesAndSeconds(minutes) {
   const date = new Date(null)
@@ -129,7 +131,7 @@ function minutesToHourMinutesAndSeconds(minutes) {
   return date.toISOString().slice(11, 19)
 }
 
-async function start() {
+async function start() { 
   // pegar as sugestões de filmes da API
   const { results } = await getMovies()
   // pegar randomicamente 3 filmes para sugestão
@@ -137,7 +139,7 @@ async function start() {
     // pegar informações extras do 3 filmes
     const info = await getMoreInfo(movie)
 
-    // organizar os dados para ...
+    // organizar os dados para passar infos, para os elementos...  
     const props = {
       id: info.id,
       title: info.title,

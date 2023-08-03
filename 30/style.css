@@ -92,7 +92,7 @@ header button p {
 .duration,
 .year,
 .movie button,
-.title>div {
+.title > div {
   display: flex;
   align-items: center;
 }
@@ -104,7 +104,7 @@ header button p {
   justify-content: space-between;
 }
 
-.title>div {
+.title > div {
   color: var(--cores-amarelo, #FEEA35);
   font-family: Outfit;
   font-size: 16px;
