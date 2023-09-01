@@ -1,0 +1,245 @@
+* {
+  padding: 0;
+  margin: 0;  
+  box-sizing: border-box;
+  -webit-font-smoothing: antialiased;
+}
+
+:root {
+  font-size: 62.5%;
+  --font-02: 'Roboto', sans-serif;
+  --font-03: 'Space Grotesk', sans-serif;
+}
+
+body {
+  height: 100vh;
+  width: 100%;
+  
+  font-family: var(--font-03);
+  color: #F3f4fe;
+  font-size: 1.6rem;
+
+  background-image: url('./assets/img-hero.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  display: flex;
+  justify-content: center;
+}
+
+.container {
+  display: flex;
+  align-items: center;
+  gap: 32px;
+}
+
+
+.content {
+  width: 490px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.content h1 {
+  max-width: 340px;
+
+  font-size: 4rem;
+  font-weight: 400;
+  line-height: 130%;
+
+  text-transform: uppercase;
+
+  background: var(--linear, linear-gradient(90deg, #dee0fc 0%, #996DFF 51.04%, #bc9FFF 100%));
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.details {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.details > img {
+  display: none;
+}
+
+
+label {
+  color: var(--gray-light, #F3F4FE);
+  /* Headline-20 */
+  font-family: var(--font-03);
+  font-size: 2.4rem;
+  font-weight: 400;
+  line-height: 160%; /* 2rem */
+  text-transform: uppercase;
+}
+
+.input {
+  display: flex;
+  align-items: center;
+  width: 80%;
+  gap: 12px;
+  padding: 16px 12px;
+
+  background: #F3f4fe;
+}
+
+input {
+  outline: none;
+  border: 0;
+  width: 70%;
+
+  font-family: var(--font-02);
+  color: #202024;
+  font-size: 1.4rem;
+  font-weight: 400;
+  line-height: 160%;
+
+  background-color: #F3f4fe;
+}
+
+input::placeholder {
+  font-family: var(--font-02);
+  color: #202024;
+  font-size: 1.4rem;
+  font-weight: 400;
+  line-height: 160%;
+}
+
+#error {
+  display: none;
+  font-family: var(--font-02);
+  font-size: 1.8rem;
+  font-weight: 400;
+  line-height: 160%;
+
+  color: #FF8F8F;
+}
+
+button {
+  padding: 22px 40px;
+  background-color: #8860e6;
+  width: 80%;
+  border: none;
+
+  cursor: pointer;
+
+  color: #FFF;
+  text-align: center;
+  font-family: var(--font-02);
+  font-size: 1.4rem;
+  font-weight: 700;
+  text-transform: uppercase;
+
+  transition: all ease-in .2s;
+}
+
+a {
+  text-decoration: none;
+  padding: 22px 40px;
+  background-color: #8860e6;
+  width: 80%;
+  border: none;
+
+  cursor: pointer;
+
+  color: #FFF;
+  text-align: center;
+  font-family: var(--font-02);
+  font-size: 1.4rem;
+  font-weight: 700;
+  text-transform: uppercase;
+
+  transition: all ease-in .2s;
+}
+
+button:hover, 
+a {
+  background-color: #5B409B;;
+}
+
+.ticket {
+  display: flex;
+
+  background-image: url('./assets/bg-card-ticket.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.ticket-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 45px;
+}
+
+.info {
+  display: flex;
+  flex-direction: column;
+
+  height: 318px;
+  padding: 16px;
+  background: #F3f4fe;
+  color: #202024;
+}
+
+.user-ticket-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+
+  margin-bottom: 36px;
+}
+
+.user-ticket-info span {
+  color: #8860e6;
+  text-align: center;
+  font-size: 1.2rem;
+  font-weight: 500;
+  line-height: 125%;
+
+  letter-spacing: 1.26px;
+  text-transform: uppercase;
+}
+
+.user-ticket-info h1 {
+  color: #202024;
+  text-align: center;
+  font-family: var(--font-02);
+  font-size: 1.6rem;
+  font-weight: 700;
+  line-height: 125%;
+}
+
+.user-ticket-info img {
+  width: 127px;
+  border-radius: 63%;
+}
+
+.event-ticket-info {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 5px;
+}
+
+.event-ticket-info span {
+  color: #202024;
+  font-size: 1rem;
+  font-weight: 500;
+  line-height: 16px;
+
+  letter-spacing: 1.05px;
+  text-transform: uppercase;
+}
+
+
+.event-ticket-info > span:nth-child(2) {
+  font-weight: 700;
+  text-align: start;
+}

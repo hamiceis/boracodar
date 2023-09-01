@@ -1,0 +1,156 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  -webkit-font-smoothing: antialiased;
+}
+
+:root {
+  --font-primary: 'Inter', sans-serif;
+  --font-secondary: 'Ubuntu Mono', monospace;
+}
+
+body {
+  font-family: var(--font-primary);
+  color: var(--foam, #D7DAE2);
+  background-color: black;
+
+  font-weight: 300;
+  line-height: 1.75rem; 
+
+  height: 100%;
+  width: 100%;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+i {
+  font-size: 2rem;
+  color: #FFFFFF;
+}
+
+#app {
+  max-width: 768px;
+  width: 26.875rem;
+  height: 100%;
+
+  padding-inline: 1.5rem;
+
+  background: var(--blueberry, #07061D);
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  margin-top: 3.94rem;
+  margin-bottom: 2.13rem;
+}
+
+.code-input {
+  padding: 0.75rem 1.75rem 1.875rem 1rem;
+
+  border-radius: 0.3125rem;
+  border: 1px solid var(--20-guava, rgba(220, 255, 214, 0.20));
+  background: var(--8-lemon, rgba(194, 255, 184, 0.08));
+}
+
+.code-wrapper pre code {
+  background-color: transparent;
+  text-align: justify;
+
+  white-space: pre-wrap;
+  word-wrap: break-word;
+  
+
+  border: none;
+  outline: none;
+  
+}
+
+.code-wrapper {
+  margin-bottom: 2.63rem;
+}
+
+
+.code-wrapper p,
+.prompt-wrapper p {
+  font-size: 1.125rem;
+  margin-bottom: 1rem;
+}
+
+.prompt-wrapper {
+  margin-bottom: 2.5rem;
+}
+
+.container {
+  width: 100%;
+  height: 5.6rem;
+  padding: 0.75rem 1.75rem 1.875rem 1rem;
+
+  border-radius: 0.3125rem;
+  border: 1px solid var(--20-guava, rgba(220, 255, 214, 0.20));
+  background: var(--8-lemon, rgba(194, 255, 184, 0.08));
+}
+
+.container textarea {
+  max-width: 21.125rem;
+  width: 100%;
+
+  background: transparent;
+  border: none;
+  outline: none;
+  resize: none;
+
+  color: var(--80-snow, rgba(255, 255, 255, 0.80));
+
+  font-size: 1rem;
+  line-height: 1.5rem;
+}
+
+.container > textarea::-webkit-scrollbar {
+  background-color: none;
+  width: .4rem;
+}
+
+.container > textarea::-webkit-scrollbar-track {
+  background-color: transparent;
+}
+
+.container > textarea::-webkit-scrollbar-thumb {
+  border-radius: 62.4375rem;
+  opacity: 0.4;
+  background: var(--snow, #FFF);
+}
+
+.prompt-wrapper button { 
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.625rem;
+
+  margin-top: 1.5rem;
+  width: 23.875rem;
+  height: 3.3125rem;
+  padding: 0.1875rem 1.375rem;
+
+
+  border-radius: 0.625rem;
+  border: 1px solid var(--pistachio, #D3FFCC);
+  background-color: transparent;
+
+  color: var(--pistachio, #D3FFCC);
+
+  font-size: 1rem;
+  font-weight: 600;
+  line-height: 1.5rem; /* 150% */
+
+  cursor: pointer;
+}
+
+.prompt-wrapper button i {
+  font-size: 1.5rem;
+}

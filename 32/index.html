@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;600&family=Ubuntu+Mono&display=swap" 
+  rel="stylesheet">
+
+  <script src="https://unpkg.com/@phosphor-icons/web"></script>
+  <title>boracodar 32 - App de tradução de SQL com IA</title>
+</head>
+<body>
+  <div id="app">
+    <header>
+      <img src="./assets/Logo.png" alt="logo">
+      <i class="ph ph-trash"></i>
+    </header>
+
+    <section class="code-wrapper">
+      <p>Cole seu código SQL aqui</p>
+
+      <div class="code-input">
+        <pre>
+<code class="hljs language-sql" contenteditable="true">CREATE TABLE IF NOT EXISTS "chats" ( 
+  "id" uuid PRIMARY KEY DEFAULT 
+  gen_random_uuid() NOT NULL,
+  "title" text,"atlas_user_id" uuid NOT NULL, 
+  "created_at" timestamp DEFAULT now());</code></pre>
+      </div>
+    </section>
+
+    <div class="prompt-wrapper">
+      <p>Faça uma pergunta sobre o código</p>
+
+      
+      <div class="container">
+        <textarea  placeholder="Me liste todos os chats que possuem pelo menos 4 mensagens"></textarea>
+      </div>
+      
+      <button>
+        <i class="ph-fill ph-sparkle"></i>
+        <span>Perguntar à inteligência artificial</span>
+      </button>
+    </div>
+
+    <section class="code-wrapper">
+      <p>Cole seu código SQL aqui</p>
+
+      <div class="code-input">
+        <pre><code class="hljs language-sql" contenteditable="true">SELECT c.id, c.title 
+ FROM chats c
+ INNER JOIN (
+        SELECT chat_id, COUNT(*) AS message_count
+      FROM messages
+      GROUP BY chat_id
+) m ON c.id = m.chat_id
+WHERE m.message_count >= 4;</code></pre>
+      </div>
+    </section>
+
+  </div>
+  
+</body>
+</html>

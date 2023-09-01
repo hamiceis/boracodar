@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="styles.css">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@300;600&family=Roboto&family=Space+Grotesk&display=swap"
+    rel="stylesheet">
+
+  <script type="module" src="./main.js" defer></script>
+
+  <title>Gerador de ticket - #boracodar 33</title>
+</head>
+
+<body>
+  <div class="container">
+
+    <div class="content">
+      <h1>Gere seu ticket e compartilhe com o mundo</h1>
+
+      <div class="details">
+        <img src="./assets/Confirmado.svg" alt="confirmado">
+        <label for="username">Digite seu usuário do Github</label>
+      </div>
+
+      <div class="input">
+        <img src="./assets/Vector.png" alt="icone-github">
+
+        <input type="text" name="username" id="username" placeholder="Nome do usuário" autocapitalize="off"
+          autocomplete="off">
+
+      </div>
+
+      <span id="error">Usuário inválido. Verifique e tente novamente.</span>
+      <button>
+        GERAR MEU TICKET
+      </button>
+    </div>
+
+
+    <div class="ticket">
+      <div class="ticket-container">
+        <img src="./assets/img-cover-ticket.png" alt="bg-ia-para-devs">
+
+        <div class="info">
+          <div class="user-ticket-info">
+            <img id="photo" src="./assets/img-avatar.png" alt="default-avatar">
+
+            <span>TRIPULANTE</span>
+
+            <h1 id="name">Seu nome aqui</h1>
+          </div>
+
+          <div class="event-ticket-info">
+              <span>EVENTO</span>
+              <span>IA PARA DEVS</span>
+          </div>
+          <div class="event-ticket-info">
+              <span>DATA</span>
+              <span>14 - 16 AGO. 2023</span>
+          </div>
+          <div class="event-ticket-info">
+              <span>HORA</span>
+              <span>AO VIVO - 19H</span>
+          </div>
+
+          <img src="./assets/lines-svg.svg" alt="lines">
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+</body>
+</html>
