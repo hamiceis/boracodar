@@ -7,6 +7,7 @@ const iconeSucess = document.querySelector(".details > img");
 const labelElement = document.querySelector("label");
 const errorElement = document.querySelector('#error');
 
+
 // Função para construir a URL da API do GitHub
 const getGitHubAPIUrl = (username) => `https://api.github.com/users/${username}`;
 
@@ -37,7 +38,11 @@ button.addEventListener('click', async () => {
     const data = await response.json();
     errorElement.style.display = 'none';
     displayUserData(data);
-    button.innerText = "Fazer Download"
+
+    button.outerHTML = `<a id="downloadTicket">Fazer Download</a>`
+
+    const downloadButton = document.querySelector('#downloadTicket');
+    downloadButton.addEventListener('click', downloadTicketImage);
     input.value = '';
 
   } catch (error) {
@@ -45,5 +50,30 @@ button.addEventListener('click', async () => {
     console.error(error.message);
   }
 });
+
+
+const downloadTicketImage = async () => {
+  const ticketElement = document.querySelector('.ticket');
+  
+  try {
+    const canvas = await html2canvas(ticketElement);
+    
+    // Converta o canvas em uma imagem
+    const ticketImage = canvas.toDataURL('image/jpg');
+    
+    // Crie um link para fazer o download da imagem
+    const downloadLink = document.createElement('a');
+    downloadLink.href = ticketImage;
+    downloadLink.download = 'ticket.jpg';
+    
+    // Clique automaticamente no link para iniciar o download
+    downloadLink.click();
+  } catch (error) {
+    console.error(error.message);
+  }
+};
+
+// Adicione um ouvinte de eventos para o botão de download
+
 
 
